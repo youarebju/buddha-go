@@ -9,4 +9,18 @@
         <nav class="logo"></nav>
         <div class="sentence">How are you?</div>
     </body>
+    <script>
+        var notifyConfig = {
+        body: '\\ ^o^ /', 
+        icon: 'images/logo.svg'
+        };
+
+        if (Notification.permission === 'default' || Notification.permission === 'undefined') {
+        Notification.requestPermission(function (permission) {
+            if (permission === 'granted') { // 使用者同意授權
+                var notification = new Notification('Hi there!', notifyConfig); // 建立通知
+            }
+        });
+        }
+    </script>
 </html>
