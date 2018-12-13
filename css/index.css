@@ -1,4 +1,7 @@
-﻿.logo {
+﻿html {
+  font-family: Arial
+}
+.logo {
   background: url(../images/logo.svg);
   display: block;
   width: 200px;
